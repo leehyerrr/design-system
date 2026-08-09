@@ -10,5 +10,7 @@
     "moduleResolution": "bundler",
     "ignoreDeprecations": "6.0",
     "jsx": "react-jsx"
+    // "esModuleInterop": true,
+    // "allowSyntheticDefaultImports": true
   }
 }
