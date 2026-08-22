@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    //"rootDir": "./src",
+    "target": "esnext",
+    "module": "esnext",
+    "lib": ["ESNext", "DOM"],
+    "declaration": true,
+    "strict": true,
+    "moduleResolution": "bundler",
+    "ignoreDeprecations": "6.0",
+    "jsx": "react-jsx"
+    // "esModuleInterop": true,
+    // "allowSyntheticDefaultImports": true
+  }
+}

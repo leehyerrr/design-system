@@ -19,8 +19,8 @@
     "clean": "rm -rf dist"
   },
   "devDependencies": {
+    "@foundation/esbuild-config": "workspace:^",
     "@types/node": "^26.2.0",
-    "esbuild": "^0.28.1",
     "typescript": "^7.0.2"
   }
 }

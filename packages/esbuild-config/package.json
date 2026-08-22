@@ -1,0 +1,11 @@
+{
+  "name": "@foundation/esbuild-config",
+  "packageManager": "pnpm@9.7.1",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "esbuild": "^0.28.1"
+  }
+}
