@@ -20,3 +20,5 @@ dist
 .nx/cache
 .nx/workspace-data
 .nx/migrate-runs
+*storybook.log
+storybook-static

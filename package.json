@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "build": "nx build",
-    "graph": "nx run-many --target=build --graph"
+    "graph": "nx run-many --target=build --graph",
+    "dev:all": "pnpm dev:storybook & pnpm dev:packages",
+    "dev:storybook": "nx storybook @foundation/storybook",
+    "dev:packages": "nx run-many --target=dev --projects='@foundation/react-components-*'"
   },
   "packageManager": "pnpm@9.7.1",
   "devDependencies": {

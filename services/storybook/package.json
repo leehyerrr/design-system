@@ -1,0 +1,25 @@
+{
+  "name": "@foundation/storybook",
+  "version": "1.0.0",
+  "packageManager": "pnpm@9.7.1",
+  "devDependencies": {
+    "@chromatic-com/storybook": "latest",
+    "@foundation/react-components-layout": "workspace:^",
+    "@foundation/themes": "workspace:^",
+    "@storybook/addon-a11y": "^10.5.10",
+    "@storybook/addon-docs": "^10.5.10",
+    "@storybook/addon-themes": "^10.5.10",
+    "@storybook/addon-vitest": "^10.5.10",
+    "@storybook/react-vite": "^10.5.10",
+    "@vitest/browser-playwright": "latest",
+    "@vitest/coverage-v8": "latest",
+    "playwright": "latest",
+    "storybook": "^10.5.10",
+    "vite": "^8.2.2",
+    "vitest": "latest"
+  },
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  }
+}

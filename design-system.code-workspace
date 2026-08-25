@@ -7,7 +7,7 @@
       "path": "packages",
     },
     {
-      "path": "packages/themes",
+      "path": "services",
     },
   ],
   "settings": {
