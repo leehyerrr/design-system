@@ -8,7 +8,8 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
-    }
+    },
+    "./style.css": "./dist/index.css"
   },
   "scripts": {
     "build": "pnpm run clean && pnpm run build:js && pnpm run build:type",
@@ -23,6 +24,7 @@
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.4",
     "@vanilla-extract/css": "^1.21.2",
+    "@vanilla-extract/esbuild-plugin": "^2.3.22",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "typescript": "^7.0.2"

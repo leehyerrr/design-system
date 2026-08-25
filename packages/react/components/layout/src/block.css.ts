@@ -1,7 +1,8 @@
+import { vars } from "@foundation/themes";
 import { style } from "@vanilla-extract/css";
 
 export const blockStyle = style({
   width: "100px",
   height: "100px",
-  //backgroundColor: vars.colors.$static.light,
+  backgroundColor: vars.colors.$scale.blue[500],
 });
