@@ -20,7 +20,7 @@ module.exports = {
   rules: {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "react/react-in-jsx-scope": "off",
+    //"react/react-in-jsx-scope": "off",
     "comma-dangle": "off",
     "react/display-name": "off",
     "no-empty-function": "off",

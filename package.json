@@ -2,7 +2,7 @@
   "name": "design-system",
   "version": "0.0.0",
   "scripts": {
-    "build": "nx build",
+    "build": "nx run-many --target=build --all",
     "graph": "nx run-many --target=build --graph",
     "dev:all": "pnpm dev:storybook & pnpm dev:packages",
     "dev:storybook": "nx storybook @foundation/storybook",
