@@ -1,6 +1,11 @@
 import { Box as _Box } from "@foundation/react-components-layout";
 import "@foundation/react-components-layout/style.css";
 
+// declare module "@foundation/react-components-layout/style.css" {
+//   const styles: Record<string, string>;
+//   export default styles;
+// }
+
 export default {
   title: "React Components/Layout/Box",
   component: _Box,

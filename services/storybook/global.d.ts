@@ -1,1 +1,1 @@
-declare module "*.css";
+declare module "@foundation/react-components-layout/style.css";

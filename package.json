@@ -6,10 +6,11 @@
     "graph": "nx run-many --target=build --graph",
     "dev:all": "pnpm dev:storybook & pnpm dev:packages",
     "dev:storybook": "nx storybook @foundation/storybook",
-    "dev:packages": "nx run-many --target=dev --projects='@foundation/react-components-*'"
+    "dev:packages": "nx run-many --target=dev --projects=@foundation/react-components-*"
   },
   "packageManager": "pnpm@9.7.1",
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@typescript-eslint/eslint-plugin": "^8.67.0",
     "@typescript-eslint/parser": "^8.67.0",
     "eslint": "^10.9.0",
@@ -23,6 +24,7 @@
     "eslint-plugin-storybook": "^10.5.10",
     "nx": "23.1.1",
     "prettier": "^3.9.6",
-    "typescript": "^7.0.2"
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.69.0"
   }
 }

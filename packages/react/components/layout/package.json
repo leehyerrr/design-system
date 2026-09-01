@@ -16,7 +16,7 @@
     "build:js": "node build.js",
     "build:type": "tsc --emitDeclarationOnly",
     "clean": "rm -rf dist",
-    "dev": "pnpm build:js --dev --watch && pnpm build:type --watch"
+    "dev": "pnpm build:js --dev --watch & pnpm build:type --watch"
   },
   "devDependencies": {
     "@foundation/esbuild-config": "workspace:^",

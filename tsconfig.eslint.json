@@ -1,4 +1,9 @@
 {
   "extends": "./tsconfig.base.json",
-  "include": ["packages", "services", ".storybook/*.js", ".eslintrc.js"]
+  "include": [
+    "packages",
+    "services",
+    // ".storybook/*.js",
+    // "eslint.config.js"
+  ]
 }
