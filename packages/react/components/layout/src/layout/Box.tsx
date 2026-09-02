@@ -5,34 +5,50 @@ import { StyleSprinkles } from "../core/style.css";
 import { extractSprinkleProps } from "../utils/properties";
 import { BoxProps } from "./types";
 
+const resolveThemeColor = (value?: string, tone = 700) => {
+    if (!value) {
+        return undefined;
+    }
+
+    const palette = vars.colors.$scale as Record<string, Record<number, string>>;
+
+    return palette[value]?.[tone] ?? value;
+};
+
+const buildBoxStyle = (props: BoxProps) => ({
+    color: resolveThemeColor(props.color, 700),
+    background: resolveThemeColor(props.background, 100),
+});
+
 const Box = (props: BoxProps): React.ReactElement => {
     const {
-        as = "div",
+        as: Component = "div",
         color,
         background,
+        className,
         children,
         ref,
+        style,
         ...rest
     } = props;
 
+    const sprinkleProps = extractSprinkleProps(
+        props,
+        Array.from(StyleSprinkles.properties),
+    );
+
     return React.createElement(
-        as,
+        Component,
         {
             ...rest,
             ref,
             className: clsx([
-                StyleSprinkles(
-                    extractSprinkleProps(
-                        props,
-                        Array.from(StyleSprinkles.properties),
-                    ),
-                ),
-                props.className,
+                StyleSprinkles(sprinkleProps),
+                className,
             ]),
             style: {
-                color: vars.colors.$scale?.[color]?.[700] ?? color,
-                background: vars.colors.$scale?.[background]?.[100] ?? background,
-                ...props.style,
+                ...buildBoxStyle(props),
+                ...style,
             },
         },
         children,

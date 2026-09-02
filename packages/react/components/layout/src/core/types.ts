@@ -2,17 +2,22 @@ import { vars } from "@foundation/themes";
 import type { JSX } from "react";
 import { StyleSprinkles } from "./style.css";
 
-type AsProps = {
-    as?: Exclude<keyof JSX.IntrinsicElements, keyof SVGElementTagNameMap>;
+type ColorToken = keyof typeof vars.colors.$scale & string;
+
+type AsProps<T extends keyof JSX.IntrinsicElements = "div"> = {
+    as?: T;
 };
 
-type ElementProps = Omit<React.HTMLAttributes<HTMLElement>, "as">;
+type ElementProps<T extends keyof JSX.IntrinsicElements = "div"> = Omit<
+    React.ComponentPropsWithoutRef<T>,
+    "as" | "color" | "background"
+>;
 
-export type AsElementProps = AsProps & ElementProps;
+export type AsElementProps<T extends keyof JSX.IntrinsicElements = "div"> = AsProps<T> & ElementProps<T>;
 
 export type ColorProps = {
-    color: keyof typeof vars.colors.$scale & string;
-    background: keyof typeof vars.colors.$scale & string;
-}
+    color?: ColorToken | string;
+    background?: ColorToken | string;
+};
 
 export type StyleProps = Parameters<typeof StyleSprinkles>[0] & ColorProps;
